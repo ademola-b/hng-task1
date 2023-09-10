@@ -14,13 +14,13 @@ class Task(APIView):
         current_time = datetime.datetime.now(datetime.timezone.utc)
         day = current_time.strftime("%A")
         route = {
-        "slack_name": slack_name,
-        "current_day": day,
-        "utc_time": current_time,
-        "track": track,
-        "github_file_url": "",
-        "github_repo_url": "",
-        "status_code":200
+            "slack_name": slack_name,
+            "current_day": day,
+            "utc_time": current_time,
+            "track": track,
+            "github_file_url": "https://github.com/ademola-b/hng-task1/blob/main/task/views.py",
+            "github_repo_url": "https://github.com/ademola-b/hng-task1",
+            "status_code":200
         }
         return Response(route)
 
